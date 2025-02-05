@@ -56,9 +56,13 @@ transition: slide
 - Controller agiert als Vermittler
 - Stärkere Kopplung zwischen UI & Logik
 
+---
+
 ### **MVP (Model-View-Presenter)**
 - Eher für Desktop-Anwendungen
 - Presenter übernimmt UI-Logik
+
+---
 
 ### **MVVM (Model-View-ViewModel)**
 - Perfekt für moderne UI-Frameworks
@@ -75,6 +79,7 @@ public class Person
     public int Alter { get; set; }
 }
 ```
+---
 
 ### **ViewModel:**
 ```csharp
@@ -83,6 +88,7 @@ public class PersonViewModel : INotifyPropertyChanged
     public ObservableCollection<Person> PersonenListe { get; set; }
 }
 ```
+---
 
 ### **View (XAML):**
 ```xml
@@ -99,7 +105,7 @@ public class PersonViewModel : INotifyPropertyChanged
 
 ---
 
-## 🌍 **MVVM in modernen Frameworks**
+## **MVVM in modernen Frameworks**
  **WPF (.NET)** → Desktop-Anwendungen  
  **Blazor (WebAssembly)** → Webanwendungen  
  **SwiftUI (Apple)** → Apple-Ökosystem  
