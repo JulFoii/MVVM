@@ -16,10 +16,10 @@ jobs:
       - name: 🚀 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: 📌 Install Marp CLI
-        run: npm install -g @marp-team/marp-cli
+        run: npm install -g @marp-team/marp-cli@2.0.4
 
       - name: 📄 Generate HTML and PDF
         run: |
