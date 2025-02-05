@@ -33,17 +33,3 @@ jobs:
           publish_dir: .
           external_repository: JulFoii/MVVM
           publish_branch: gh-pages
-
-      - name: 🐳 Build and Push Docker Image
-        run: |
-          echo "FROM node:16
-          WORKDIR /app
-          RUN npm install -g @marp-team/marp-cli
-          COPY mvvm.md /app/mvvm.md
-          RUN marp mvvm.md --html -o /app/index.html
-          RUN npm install -g http-server
-          CMD [\"http-server\", \"-p\", \"8080\"]" > Dockerfile
-
-          docker build -t ghcr.io/${{ github.repository_owner }}/marp-presentation:latest .
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker push ghcr.io/${{ github.repository_owner }}/marp-presentation:latest
