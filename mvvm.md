@@ -19,8 +19,8 @@ transition: slide
 
 ---
 
-## **Warum Architekturmuster?**
-- Klare Trennung von Verantwortlichkeiten  
+## **Warum wurde MVVM entwickelt?**
+- Klare Trennung zwischen Daten und Darstellung
 - Erleichtert Wartung und Erweiterung  
 - Fördert Wiederverwendbarkeit von Code  
 - Reduziert Abhängigkeiten zwischen UI & Geschäftslogik
